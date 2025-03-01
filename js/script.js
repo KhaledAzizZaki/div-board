@@ -32,10 +32,13 @@ for (let i of completeBtn) {
     let time = toDayTime.toLocaleTimeString().split(":");
     let time1 = parseInt(time[0]);
     let time3 = "";
-    console.log(time1);
-    if (time1 > 12) {
-      time1 = time1 - 12;
-      time3 = `${time1}:${time[1]}:${time[2]} PM`;
+    if (time1 > 11) {
+      if (time1 > 12) {
+        time1 = time1 - 12;
+        time3 = `${time1}:${time[1]}:${time[2]} PM`;
+      } else {
+        time3 = `${time1}:${time[1]}:${time[2]} PM`;
+      }
     } else {
       time3 = `${time1}:${time[1]}:${time[2]} AM`;
     }
@@ -57,6 +60,16 @@ for (let i of completeBtn) {
 // clear History
 document.getElementById("clear-history").addEventListener("click", function () {
   document.getElementById("history").innerHTML = "";
+});
+
+// Body color change
+document.getElementById("theme-btn").addEventListener("click", function () {
+  let num1 = parseInt(Math.random() * 255);
+  let num2 = parseInt(Math.random() * 255);
+  let num3 = parseInt(Math.random() * 255);
+  let color = `rgb(${num1}, ${num2}, ${num3})`;
+
+  document.getElementById("theme-body").style.backgroundColor = color;
 });
 
 // Go to blogs page
