@@ -79,7 +79,8 @@
             </div>
             <!-- 2nd card -->
             <div
-              class="flex items-center bg-gradient-to-r from-blue-600 to-purple-300 rounded-xl justify-center py-6 gap-5 flex-2"
+              id="discover"
+              class="flex items-center bg-gradient-to-r from-blue-600 to-purple-300 rounded-xl justify-center py-6 gap-5 flex-2 cursor-pointer"
             >
               <div>
                 <img src="assets/board.png" alt="" />
@@ -97,8 +98,8 @@
                 <img src="assets/calender.png" alt="" />
               </div>
               <div>
-                <p class="font-medium">wed,</p>
-                <h3 class="font-bold text-xl">Jul 28 2025</h3>
+                <p id="day-of-week" class="font-medium"></p>
+                <h3 id="full-date" class="font-bold text-xl"></h3>
               </div>
             </div>
           </div>
@@ -260,5 +261,6 @@
         </div>
       </section>
     </main>
+    <script src="js/script.js"></script>
   </body>
 </html>
