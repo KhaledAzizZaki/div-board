@@ -109,7 +109,9 @@
             <!-- 1st card -->
             <div class="bg-blue-50 p-6 rounded-2xl">
               <p class="bg-white inline-block px-4 py-2 rounded-lg">ShopEase</p>
-              <h4 class="py-4 font-medium text-2xl">Fix Mobile Button Issue</h4>
+              <h4 class="py-4 font-medium text-2xl task-title">
+                Fix Mobile Button Issue
+              </h4>
               <div class="pb-4 dotted-border">
                 <p class="text-gray-400 p-4 bg-white rounded-lg">
                   Debug using Chrome DevTools, check for overlappin
@@ -132,7 +134,9 @@
               <p class="bg-white inline-block px-4 py-2 rounded-lg">
                 CloudSync
               </p>
-              <h4 class="py-4 font-medium text-2xl">Add Dark Mode</h4>
+              <h4 class="py-4 font-medium text-2xl task-title">
+                Add Dark Mode
+              </h4>
               <div class="pb-4 dotted-border">
                 <p class="text-gray-400 p-4 bg-white rounded-lg">
                   Store the user's preference in localStorage, update CSS vari
@@ -153,7 +157,9 @@
             <!-- 3rd card -->
             <div class="bg-blue-50 p-6 rounded-2xl">
               <p class="bg-white inline-block px-4 py-2 rounded-lg">SwiftPay</p>
-              <h4 class="py-4 font-medium text-2xl">Optimize Home page </h4>
+              <h4 class="py-4 font-medium text-2xl task-title">
+                Optimize Home page 
+              </h4>
               <div class="pb-4 dotted-border">
                 <p class="text-gray-400 p-4 bg-white rounded-lg">
                   Debug using Chrome DevTools, check for overlappin
@@ -174,7 +180,9 @@
             <!-- 4th card -->
             <div class="bg-blue-50 p-6 rounded-2xl">
               <p class="bg-white inline-block px-4 py-2 rounded-lg">Meta</p>
-              <h4 class="py-4 font-medium text-2xl">Add new emoji 🤲</h4>
+              <h4 class="py-4 font-medium text-2xl task-title">
+                Add new emoji 🤲
+              </h4>
               <div class="pb-4 dotted-border">
                 <p class="text-gray-400 p-4 bg-white rounded-lg">
                   Debug using Chrome DevTools, check for overlappin
@@ -197,7 +205,9 @@
               <p class="bg-white inline-block px-4 py-2 rounded-lg">
                 Google LLC
               </p>
-              <h4 class="py-4 font-medium text-2xl">Integrate OpenAI API</h4>
+              <h4 class="py-4 font-medium text-2xl task-title">
+                Integrate OpenAI API
+              </h4>
               <div class="pb-4 dotted-border">
                 <p class="text-gray-400 p-4 bg-white rounded-lg">
                   Debug using Chrome DevTools, check for overlappin
@@ -220,7 +230,9 @@
               <p class="bg-white inline-block px-4 py-2 rounded-lg">
                 Glassdoar
               </p>
-              <h4 class="py-4 font-medium text-2xl">Improve Job searching</h4>
+              <h4 class="py-4 font-medium text-2xl task-title">
+                Improve Job searching
+              </h4>
               <div class="pb-4 dotted-border">
                 <p class="text-gray-400 p-4 bg-white rounded-lg">
                   Debug using Chrome DevTools, check for overlappin
@@ -243,23 +255,22 @@
         <!-- part 2 -->
         <div class="bg-white rounded-lg">
           <!-- part 1 -->
-          <div class="dotted-border">
+          <div class="dotted-border min-w-96">
             <div class="flex gap-4 justify-center pt-6">
               <img src="assets/activity.png" alt="" />
               <p>Activity Log</p>
             </div>
             <div class="text-center">
-              <button class="accent px-6 py-3 rounded-lg my-4 text-white">
+              <button
+                id="clear-history"
+                class="accent px-6 py-3 rounded-lg my-4 text-white mx-6"
+              >
                 Clear History
               </button>
             </div>
           </div>
           <!-- part 2 -->
-          <div class="px-6">
-            <p class="p-3 bg-blue-50 rounded-lg mt-6">
-              You have Complete The Task Add Dark Mode at 12:48:15 PM
-            </p>
-          </div>
+          <div id="history"></div>
         </div>
       </section>
     </main>

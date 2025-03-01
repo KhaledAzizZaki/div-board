@@ -27,9 +27,37 @@ for (let i of completeBtn) {
     event.target.classList.remove("accent");
     // disable button
     i.disabled = true;
-    // add activity log
+    // time
+    let toDayTime = new Date();
+    let time = toDayTime.toLocaleTimeString().split(":");
+    let time1 = parseInt(time[0]);
+    let time3 = "";
+    console.log(time1);
+    if (time1 > 12) {
+      time1 = time1 - 12;
+      time3 = `${time1}:${time[1]}:${time[2]} PM`;
+    } else {
+      time3 = `${time1}:${time[1]}:${time[2]} AM`;
+    }
+    // add activity log history
+    let j = i.parentNode.parentNode.childNodes[3].innerText;
+    let history = document.getElementById("history");
+    let div = document.createElement("div");
+    div.innerHTML = `
+    <div class="px-6">
+              <p class="p-3 bg-blue-50 rounded-lg mt-6">
+                You have Complete The Task ${j} at ${time3}
+              </p>
+            </div>
+    `;
+    history.appendChild(div);
   });
 }
+
+// clear History
+document.getElementById("clear-history").addEventListener("click", function () {
+  document.getElementById("history").innerHTML = "";
+});
 
 // Go to blogs page
 document.getElementById("discover").addEventListener("click", function () {
